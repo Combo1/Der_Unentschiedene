@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Der Unentschiedene</title>
+    <link rel="stylesheet" href ="styles.css">
+</head>
+
+<body>
+<div class="navbar" id="sticky-navigation">
+    <div class = "container">
+        <div class ="navbar-header">
+            <div class ="home">
+                <span class = "Home">
+                    <a href ="index.html">
+                        Home
+                    </a>
+                </span>
+            </div>
+            <div class="navbar-subnav">
+                <span class = "Informatik">
+                    <a href ="informatik.html">
+                        Informatik
+                    </a>
+                </span>
+                <span class ="Tischtennis">
+                    <a href ="tischtennis.html">
+                        Tischtennis
+                    </a>
+                </span>
+                <span class = "Videospiele">
+                    <a href ="videospiele.html">
+                        Videospiele
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class = "container">
+    <div class = "navbar-header">
+        <div class = "navbar-subnav">
+                <span class = "Module">
+                    <a href = "Module/Data_Vis.html">
+                        Data Visualization
+                    </a>
+                </span>
+            <span class = "Module">
+                    <a href="Module/ADA.html">
+                        Advanced Algorithms
+                    </a>
+                </span>
+        </div>
+    </div>
+</div>
+
+<h2>Data Visualization: Graphically supported hypotheses</h2>
+<p>
+When trying to detect causations between variables, the representation of the varables via different plots, plays an essential role in assessment of the hypothesis. By taking a structured
+approach one can much more easily show their analysis.
+    <b>Descriptive vs associative plots</b>
+While descriptive plots show how data is distributed in associative plots one can see relationsships between the variables, which can lead to hypothesis testing.
+Descriptive plots:
+<ul>
+    <li>histogram</li>
+    <li>boxplot</li>
+    <li>violin plot</li>
+    <li>clustered heatmap</li>
+    <li>PCA projections</li>
+</ul>
+
+<h2>Advanced Algorithms: Minimum Cuts</h2>
+Given an undirected Graph G = (V,E) we want to find a disjoint partition V_1, V_2 of V, such that the number of edges running between the two partitions is as small as possible -> minimum
+cut.
+
+We can solve this problem by considering a randomized algorithm, which randomly contracts an edge of the graph until only two vertices are left. This can be computed with a running time of
+O(n^2) and with a probability of working (n over 2)/(2^(n-1) -1). By iterating this random edge contraction algorithm, we can get our minimum cut with a probability of n^(-2d).
+
+Another way to find the minimum cut is the Fast-Cut algorithm. For this method we apply contraction twice onto our graph so that each time t vertices remain. We get as output two
+graphs H_1 and H_2 onto which we recursively call the Fast-Cut algorithm again. Afterwards we check, which result H_1 or H_2 is better and output the smaller cut. This algorithm has a
+running time of O(n^2 log n) with a probability of finding the minimum cut of Omega(1/log n).
+
+Another problem poses the minimum weighted cuts, where we seek to find a partition whose weights among edges between the partition is as small as possible.
+</body>
+</html>

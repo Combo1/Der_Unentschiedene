@@ -84,8 +84,22 @@ a {
 
 header {
     background:#2F2C2C;
+}
+
+header h1 {
     text-align:center;
 }
+
+header .DTTB{
+    float:left;
+    position:absolute;
+}
+
+header .BTTV{
+    float:right;
+    position:absolute;
+}
+
 
 /* Navigation */
 nav {

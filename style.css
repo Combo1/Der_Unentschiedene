@@ -128,7 +128,7 @@ nav ul li a {
     -webkit-transition:background 0.2s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:active {
     background:#DBD9D8;
     border-bottom: 0.188em solid #E7590B;
 }
@@ -151,7 +151,7 @@ nav ul li ul li {
     display: none;
 }
 
-nav ul li:hover ul li {
+nav ul li:hover ul li, nav ul li:active ul li {
     display: block;
 }
 
@@ -278,6 +278,12 @@ footer ul li a {
     nav ul li {
         display:block;
         margin:0.3em 0em 0.3em 0em;
+    }
+
+    nav ul li:hover ul li, nav ul li:active ul li {
+        display: inline;
+        position: relative;
+        z-index:1;
     }
 }
 
